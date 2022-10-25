@@ -9,9 +9,15 @@ import { CartService } from '../cart.service';
 })
 export class ShippingComponent implements OnInit {
   shippingCosts!: Observable<{ type: string; price: number }[]>;
+  todos!: Observable<any>;
   constructor(private cartService: CartService) {}
 
   ngOnInit(): void {
     this.shippingCosts = this.cartService.getShippingPrices();
+
+    this.cartService.getTodo().forEach(value => {
+      console.log(value)
+      return value;
+    })
   }
 }

@@ -1,5 +1,6 @@
 export const environment = {
-  production: true
+  production: true,
+  javaApi: "https://train-deploy-spring.herokuapp.com/api"
 };
 
 
